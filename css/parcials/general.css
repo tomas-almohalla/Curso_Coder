@@ -41,7 +41,9 @@ body{
     --cr_menu: #000000;
     --font_slogan: "cinzel";
     --font_menu: "arimo";
+    --text_xlg: 10em;
     --text_lg: 7em;
+    --text_lm: 2.5em;
     --text_md: 2em;
     --text_sml: 1em;
 }
@@ -110,12 +112,11 @@ header .menu{
 
 header .menu__item{
     border-bottom: 2px solid var(--cr_transparent);
+    transition: transform 1s;
+
 }
 
-header .menu__item:hover{
-border-bottom: 2px solid var(--cr_scdary);
-transition: border-color .3s ease-in-out;
-}
+
 
 .menu .menu__item .menu__link{
     font-size: var(--text_md);
@@ -136,8 +137,6 @@ footer .alineado{
 }
 
 
-
-
 footer .parrafo{
     /* display: inline-block; */
     width: 100%;
@@ -146,6 +145,11 @@ footer .parrafo{
     
 }
 
-
-
+/*Transiciones*/
+header .menu__item:hover{
+border-bottom: 2px solid var(--cr_scdary);
+transition: border-color .3s ease-in-out;
+transform: scale(1.5, 1.5);
+transition: transform 1s;
+}
 

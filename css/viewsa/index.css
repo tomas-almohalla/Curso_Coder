@@ -17,6 +17,8 @@
     height: 50vh;
     font-family: var(--font_slogan);
     font-size: var(--text_lg);
+    transition: font-size 1s;
+    gap: auto;
     font-weight: bold;
     text-decoration: underline;
     text-align: center;
@@ -29,6 +31,14 @@
 .salto span{
     font-size: 0;
 }
+
+/*Transicion index*/
+
+div .slogan:hover{
+    font-size: var(--text_xlg);
+    transition: font-size gap 2s;
+}
+
 
 @media screen and (max-width: 550px){
       .salto span{
