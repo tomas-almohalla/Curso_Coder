@@ -43,8 +43,10 @@ body{
     --font_menu: "arimo";
     --text_xlg: 10em;
     --text_lg: 7em;
+    --text_xm: 2.6em;
     --text_lm: 2.5em;
     --text_md: 2em;
+    --text_xs: 1.5em;
     --text_sml: 1em;
 }
 
@@ -54,6 +56,11 @@ body{
 .flex-row{
     display: flex;
 
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+    gap: 5em;
 }
 
 .flex-column{
@@ -103,6 +110,7 @@ header .navbar{
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem; 
+    flex-wrap: wrap;
 }
 
 header .menu{
@@ -121,6 +129,30 @@ header .menu__item{
 .menu .menu__item .menu__link{
     font-size: var(--text_md);
     padding: 1rem;
+}
+
+.sub-menu{
+    display: none;
+    padding: 1rem;
+    border-bottom: 2px solid var(--cr_transparent);
+    font-size: var(--text_md);
+}
+
+
+
+.sub-menu__link:hover{
+    background-color: var(--cr_ppal);
+    transition: background-color .3s ease-in-out;
+    border-bottom: solid var(--cr_scdary) 1px;
+  
+}
+
+
+.menu__item:hover .sub-menu{
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+    position: absolute;
 }
 
 /*FOOTER*/
@@ -149,7 +181,24 @@ footer .parrafo{
 header .menu__item:hover{
 border-bottom: 2px solid var(--cr_scdary);
 transition: border-color .3s ease-in-out;
-transform: scale(1.5, 1.5);
-transition: transform 1s;
+
 }
 
+
+@media screen and (max-width: 990px){
+    .logo{
+        flex-basis: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    header .menu{
+        flex-basis: 100%;
+        justify-content: space-between;
+        padding-left: 0;
+        
+    }
+    ul{
+        margin-right: 0;
+    }
+   
+}
